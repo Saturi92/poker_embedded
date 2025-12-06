@@ -13,6 +13,8 @@ class GameState {
   final int currentBigBlind;
   final int nextSmallBlind;
   final int nextBigBlind;
+  final int previousSmallBlind;
+  final int previousBigBlind;
   final bool isPauseRound;
   final bool nextIsPauseRound;
   final WSColor currentAccentcolor;
@@ -30,6 +32,8 @@ class GameState {
       required this.currentBigBlind,
       required this.nextSmallBlind,
       required this.nextBigBlind,
+      required this.previousSmallBlind,
+      required this.previousBigBlind,
       required this.isPauseRound,
       required this.nextIsPauseRound,
       required this.currentAccentcolor});
@@ -51,6 +55,8 @@ class GameState {
       currentBigBlind: json['current_big_blind'] as int,
       nextSmallBlind: json['next_small_blind'] as int,
       nextBigBlind: json['next_big_blind'] as int,
+      previousSmallBlind: json['previous_small_blind'] as int,
+      previousBigBlind: json['previous_big_blind'] as int,
       isPauseRound: json['is_pause_round'] as bool,
       nextIsPauseRound: json['next_is_pause_round'] as bool,
       currentAccentcolor: WSColor.fromJson(json['current_accent_color']),
@@ -71,6 +77,8 @@ class GameState {
       'current_big_blind': currentBigBlind,
       'next_small_blind': nextSmallBlind,
       'next_big_blind': nextBigBlind,
+      'previous_small_blind': previousSmallBlind,
+      'previous_big_blind': previousBigBlind,
     };
   }
 }

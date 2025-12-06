@@ -628,6 +628,19 @@ class _GameScreenState extends State<GameScreen>
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              const Text("Vorherige blinds",
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.w300)),
+                              Text(
+                                "${snapshot.data!.previousSmallBlind} | ${snapshot.data!.previousBigBlind}",
+                                      style: const TextStyle(
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                              const SizedBox(
+                                height: 32,
+                              ),
                               snapshot.data!.isPauseRound
                                   ? const Column(
                                       children: [
